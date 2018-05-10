@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDBCRUD_YP", "MongoDBCRUD_YP\MongoDBCRUD_YP.csproj", "{9606DF3F-A015-43C5-B267-AACC6734288E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDBTest", "MongoDBTest\MongoDBTest.csproj", "{AEB4EB9E-06A3-4F77-93D3-99D33242D418}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDBModel", "MongoDBModel\MongoDBModel.csproj", "{492A9BFD-20C0-4206-9D1C-9888448D44F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9606DF3F-A015-43C5-B267-AACC6734288E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9606DF3F-A015-43C5-B267-AACC6734288E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9606DF3F-A015-43C5-B267-AACC6734288E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9606DF3F-A015-43C5-B267-AACC6734288E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEB4EB9E-06A3-4F77-93D3-99D33242D418}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEB4EB9E-06A3-4F77-93D3-99D33242D418}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEB4EB9E-06A3-4F77-93D3-99D33242D418}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEB4EB9E-06A3-4F77-93D3-99D33242D418}.Release|Any CPU.Build.0 = Release|Any CPU
+		{492A9BFD-20C0-4206-9D1C-9888448D44F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{492A9BFD-20C0-4206-9D1C-9888448D44F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{492A9BFD-20C0-4206-9D1C-9888448D44F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{492A9BFD-20C0-4206-9D1C-9888448D44F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C208950-4857-4866-888A-8B1CA3630A97}
+	EndGlobalSection
+EndGlobal
