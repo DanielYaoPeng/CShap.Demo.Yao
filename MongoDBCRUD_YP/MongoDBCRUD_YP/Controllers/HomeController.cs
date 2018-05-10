@@ -82,7 +82,8 @@ namespace MongoDBCRUD_YP.Controllers
                 {
                     return new BaseResponse(){ IsSuccess = false,Message="请求参数不能为空" };
                 }
-                new MongoDbHelper<User>().Update(request);
+                 new MongoDbHelper<User>().Update(request);
+               //var result= new MongoDbHelper<User>().UpdateOne(request,request.Id);
                 response.IsSuccess = true;
                 response.Message = "SUCCESS";
             }

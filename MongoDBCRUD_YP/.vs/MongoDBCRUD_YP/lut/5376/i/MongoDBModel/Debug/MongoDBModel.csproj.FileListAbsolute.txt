@@ -1,0 +1,7 @@
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\b\MongoDBModel\bin\Debug\MongoDBModel.dll
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\b\MongoDBModel\bin\Debug\MongoDBModel.pdb
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\i\MongoDBModel\Debug\MongoDBModel.csprojResolveAssemblyReference.cache
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\i\MongoDBModel\Debug\MongoDBModel.csproj.CoreCompileInputs.cache
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\i\MongoDBModel\Debug\MongoDBModel.csproj.CopyComplete
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\i\MongoDBModel\Debug\MongoDBModel.dll
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\i\MongoDBModel\Debug\MongoDBModel.pdb

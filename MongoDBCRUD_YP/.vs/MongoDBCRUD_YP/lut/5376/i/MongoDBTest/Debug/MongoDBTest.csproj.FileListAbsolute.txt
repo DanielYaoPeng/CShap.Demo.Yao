@@ -1,0 +1,13 @@
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\b\MongoDBTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\b\MongoDBTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\b\MongoDBTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\b\MongoDBTest\bin\Debug\zh-Hans\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\b\MongoDBTest\bin\Debug\zh-Hans\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\b\MongoDBTest\bin\Debug\zh-Hans\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\b\MongoDBTest\bin\Debug\MongoDBTest.dll
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\b\MongoDBTest\bin\Debug\MongoDBTest.pdb
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\i\MongoDBTest\Debug\MongoDBTest.csprojResolveAssemblyReference.cache
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\i\MongoDBTest\Debug\MongoDBTest.csproj.CoreCompileInputs.cache
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\i\MongoDBTest\Debug\MongoDBTest.csproj.CopyComplete
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\i\MongoDBTest\Debug\MongoDBTest.dll
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\i\MongoDBTest\Debug\MongoDBTest.pdb

@@ -545,6 +545,15 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:MongoDBCRUD_YP.BLL.MongoDbHelper`1.UpdateManayAsync(`0,System.Collections.Generic.Dictionary{System.String,System.String},MongoDB.Driver.FilterDefinition{`0})">
+            <summary>
+            批量更新
+            </summary>
+            <param name="host"></param>
+            <param name="dic"></param>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
         <member name="M:MongoDBCRUD_YP.BLL.MongoLogic.#ctor(System.String)">
             <summary>
             构造函数 指定数据库

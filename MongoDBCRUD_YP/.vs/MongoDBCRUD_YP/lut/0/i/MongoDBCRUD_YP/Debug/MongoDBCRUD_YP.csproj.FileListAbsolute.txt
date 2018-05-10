@@ -1,0 +1,9 @@
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\b\MongoDBCRUD_YP\bin\ApplicationInsights.config
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\b\MongoDBCRUD_YP\bin\MongoDBCRUD_YP.dll.config
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\b\MongoDBCRUD_YP\bin\MongoDBCRUD_YP.dll
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\b\MongoDBCRUD_YP\bin\MongoDBCRUD_YP.pdb
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\i\MongoDBCRUD_YP\Debug\MongoDBCRUD_YP.csprojResolveAssemblyReference.cache
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\i\MongoDBCRUD_YP\Debug\MongoDBCRUD_YP.csproj.CoreCompileInputs.cache
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\i\MongoDBCRUD_YP\Debug\MongoDBCRUD_YP.csproj.CopyComplete
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\i\MongoDBCRUD_YP\Debug\MongoDBCRUD_YP.dll
+D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\.vs\MongoDBCRUD_YP\lut\0\i\MongoDBCRUD_YP\Debug\MongoDBCRUD_YP.pdb

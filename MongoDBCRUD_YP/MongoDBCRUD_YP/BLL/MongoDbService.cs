@@ -116,10 +116,10 @@ namespace MongoDBCRUD_YP.BLL
                     {
                         if (oldValue == null)
                             oldValue = "";
-                        if (!newValue.ToString().Equals(oldValue.ToString()))
-                        {
+                        //if (!newValue.ToString().Equals(oldValue.ToString()))
+                        //{
                             old.GetType().GetProperty(prop.Name).SetValue(old, newValue);
-                        }
+                        //}
                     }
                 }
                 old.State = "n";
@@ -195,26 +195,124 @@ namespace MongoDBCRUD_YP.BLL
             return collection.Find(a => a.State.Equals("y") || a.State.Equals("n")).ToList();
         }
 
-        public void Update<T>(T entity)
+       
+        public async Task<UpdateResult> UpdateAsync( T t, string id)
         {
-           
+            try
+            {
+                //修改条件
+                FilterDefinition<T> filter = Builders<T>.Filter.Eq("Id", id);
+                //要修改的字段
+                var list = new List<UpdateDefinition<T>>();
+                foreach (var item in t.GetType().GetProperties())
+                {
+                    if (item.Name.ToLower() == "Id") continue;
+                    list.Add(Builders<T>.Update.Set(item.Name, item.GetValue(t)));
+                }
+
+
+
+                var updatefilter = Builders<T>.Update.Combine(list);
+                return await collection.UpdateOneAsync(filter, updatefilter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
 
-        //public UpdateResult UpdateAll(FilterDefinition<T> filter, UpdateDefinition<T> update, bool isUpsert = false)
-        //{
-        //    try
-        //    {
-        //        var database = Client.GetDatabase(DatabaseName);
-        //        var myCollection = database.GetCollection<T>(CollectionName);
-        //        UpdateOptions options = new UpdateOptions() { IsUpsert = isUpsert };
-        //        return myCollection.UpdateManyAsync(filter, update, options).GetAwaiter().GetResult();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
+
+        public  UpdateResult UpdateOne( T t, string id)
+        {
+            try
+            {
+                //修改条件
+                FilterDefinition<T> filter = Builders<T>.Filter.Eq("Id", id);
+                //要修改的字段
+                var list = new List<UpdateDefinition<T>>();
+                foreach (var item in t.GetType().GetProperties())
+                {
+                    if (item.Name.ToLower() == "Id") continue;
+                    list.Add(Builders<T>.Update.Set(item.Name, item.GetValue(t)));
+                }
+                var updatefilter = Builders<T>.Update.Combine(list);
+                return collection.UpdateOne(filter, updatefilter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+
+        public  void Updates<T>(string id, T entity, List<string> properts = null, bool replace = false) where T : User
+        {
+            if (entity == null)
+                throw new NullReferenceException();
+
+            var type = entity.GetType();
+            ///修改的属性集合
+            var list = new List<UpdateDefinition<T>>();
+
+            foreach (var propert in type.GetProperties())
+            {
+                if (propert.Name.ToLower() != "id")
+                {
+                    if (properts == null || properts.Count < 1 || properts.Any(o => o.ToLower() == propert.Name.ToLower()))
+                    {
+                        var replaceValue = propert.GetValue(entity);
+                        if (replaceValue != null)
+                        {
+                            list.Add(Builders<T>.Update.Set(propert.Name, replaceValue));
+                        }
+                        else if (replace)
+                            list.Add(Builders<T>.Update.Set(propert.Name, replaceValue));
+                    }
+                }
+            }
+            #region 有可修改的属性
+            if (list.Count > 0)
+            {
+                ///合并多个修改//new List<UpdateDefinition<T>>() { Builders<T>.Update.Set("Name", "111") }
+                var builders = Builders<T>.Update.Combine(list);
+                ///执行提交修改
+               // collection.UpdateOne(o => o.Id == entity.Id, builders);
+            }
+            #endregion
+
+        }
+
+
+        /// <summary>
+        /// 批量更新
+        /// </summary>
+        /// <param name="host"></param>
+        /// <param name="dic"></param>
+        /// <param name="filter"></param>
+        /// <returns></returns>
+        public  async Task<UpdateResult> UpdateManayAsync(T t, Dictionary<string, string> dic, FilterDefinition<T> filter)
+        {
+            try
+            {
+                //要修改的字段
+                var list = new List<UpdateDefinition<T>>();
+                foreach (var item in t.GetType().GetProperties())
+                {
+                    if (!dic.ContainsKey(item.Name)) continue;
+                    var value = dic[item.Name];
+                    list.Add(Builders<T>.Update.Set(item.Name, value));
+                }
+                var updatefilter = Builders<T>.Update.Combine(list);
+                return await collection.UpdateManyAsync(filter, updatefilter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 
 
