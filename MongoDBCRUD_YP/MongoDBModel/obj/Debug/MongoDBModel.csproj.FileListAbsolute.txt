@@ -10,7 +10,6 @@ D:\项目\新人学习\CShap.Demo.Yao\MongoDBCRUD_YP\MongoDBModel\obj\Debug\Mong
 D:\项目\新人学习\CShap.Demo.Yao\MongoDBCRUD_YP\MongoDBModel\obj\Debug\MongoDBModel.csproj.CopyComplete
 D:\项目\新人学习\CShap.Demo.Yao\MongoDBCRUD_YP\MongoDBModel\obj\Debug\MongoDBModel.dll
 D:\项目\新人学习\CShap.Demo.Yao\MongoDBCRUD_YP\MongoDBModel\obj\Debug\MongoDBModel.pdb
-D:\项目\新人学习\CShap.Demo.Yao\MongoDBCRUD_YP\MongoDBModel\obj\Debug\MongoDBModel.csprojAssemblyReference.cache
 D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\MongoDBModel\bin\Debug\MongoDBModel.dll
 D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\MongoDBModel\bin\Debug\MongoDBModel.pdb
 D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\MongoDBModel\bin\Debug\MongoDB.Bson.dll
