@@ -481,14 +481,14 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
-        <member name="M:MongoDBCRUD_YP.BLL.MongoDbHelper`1.Insert(`0)">
+        <member name="M:MongoDBCRUD_YP.BLL.MongoDbHelper`1.Insert(`0,System.String)">
             <summary>
             新增
             </summary>
             <param name="entity"></param>
             <returns></returns>
         </member>
-        <member name="M:MongoDBCRUD_YP.BLL.MongoDbHelper`1.Modify(System.String,System.String,System.String)">
+        <member name="M:MongoDBCRUD_YP.BLL.MongoDbHelper`1.Modify(System.String,System.String,System.String,System.String)">
             <summary>
             修改
             </summary>
@@ -496,13 +496,13 @@
             <param name="field"></param>
             <param name="value"></param>
         </member>
-        <member name="M:MongoDBCRUD_YP.BLL.MongoDbHelper`1.Update(`0)">
+        <member name="M:MongoDBCRUD_YP.BLL.MongoDbHelper`1.Update(`0,System.String)">
             <summary>
             更新
             </summary>
             <param name="entity"></param>
         </member>
-        <member name="M:MongoDBCRUD_YP.BLL.MongoDbHelper`1.Delete(`0)">
+        <member name="M:MongoDBCRUD_YP.BLL.MongoDbHelper`1.Delete(`0,System.String)">
             <summary>
             删除
             </summary>
@@ -515,31 +515,31 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:MongoDBCRUD_YP.BLL.MongoDbHelper`1.QueryAll">
+        <member name="M:MongoDBCRUD_YP.BLL.MongoDbHelper`1.QueryAll(System.String)">
             <summary>
             查询所有数据
             </summary>
             <returns></returns>
         </member>
-        <member name="M:MongoDBCRUD_YP.BLL.MongoDbHelper`1.QueryByFirst(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+        <member name="M:MongoDBCRUD_YP.BLL.MongoDbHelper`1.QueryByFirst(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String)">
             <summary>
             根据条件查询一条数据
             </summary>
             <param name="express"></param>
             <returns></returns>
         </member>
-        <member name="M:MongoDBCRUD_YP.BLL.MongoDbHelper`1.InsertBatch(System.Collections.Generic.List{`0})">
+        <member name="M:MongoDBCRUD_YP.BLL.MongoDbHelper`1.InsertBatch(System.Collections.Generic.List{`0},System.String)">
             <summary>
             批量添加
             </summary>
             <param name="list"></param>
         </member>
-        <member name="M:MongoDBCRUD_YP.BLL.MongoDbHelper`1.DeleteBatch(System.Collections.Generic.List{MongoDB.Bson.ObjectId})">
+        <member name="M:MongoDBCRUD_YP.BLL.MongoDbHelper`1.DeleteBatch(System.Collections.Generic.List{MongoDB.Bson.ObjectId},System.String)">
             <summary>
             根据Id批量删除
             </summary>
         </member>
-        <member name="M:MongoDBCRUD_YP.BLL.MongoDbHelper`1.QueryToLucene">
+        <member name="M:MongoDBCRUD_YP.BLL.MongoDbHelper`1.QueryToLucene(System.String)">
             <summary>
             未添加到索引的数据
             </summary>
@@ -553,78 +553,6 @@
             <param name="dic"></param>
             <param name="filter"></param>
             <returns></returns>
-        </member>
-        <member name="M:MongoDBCRUD_YP.BLL.MongoLogic.#ctor(System.String)">
-            <summary>
-            构造函数 指定数据库
-            </summary>
-            <param name="dataBaseName"></param>
-        </member>
-        <member name="M:MongoDBCRUD_YP.BLL.MongoLogic.InsertAsync``1(System.String,``0)">
-            <summary>
-            异步插入一条数据，手动输入collection name
-            </summary>
-        </member>
-        <member name="M:MongoDBCRUD_YP.BLL.MongoLogic.InsertAsync``1(``0)">
-            <summary>
-            异步插入一条数据，采用类型T的完全限定名作为collection name
-            </summary>
-        </member>
-        <member name="M:MongoDBCRUD_YP.BLL.MongoLogic.BatchInsertAsync``1(System.String,System.Collections.Generic.IEnumerable{``0})">
-            <summary>
-            异步插入多条数据，手动输入collection name
-            </summary>
-        </member>
-        <member name="M:MongoDBCRUD_YP.BLL.MongoLogic.BatchInsertAsync``1(System.Collections.Generic.IEnumerable{``0})">
-            <summary>
-            异步插入多条数据，采用类型T的完全限定名作为collection name
-            </summary>
-        </member>
-        <member name="M:MongoDBCRUD_YP.BLL.MongoLogic.Insert``1(``0)">
-            <summary>
-            插入一条数据
-            </summary>
-        </member>
-        <member name="M:MongoDBCRUD_YP.BLL.MongoLogic.Insert``1(System.Collections.Generic.IEnumerable{``0})">
-            <summary>
-            插入多条数据
-            </summary>
-        </member>
-        <member name="M:MongoDBCRUD_YP.BLL.MongoLogic.Find``1(System.String,MongoDB.Driver.FilterDefinition{``0},MongoDB.Driver.FindOptions)">
-            <summary>
-            MongoDB C# Driver的Find方法，返回IFindFluent。手动输入collection name
-            </summary>
-        </member>
-        <member name="M:MongoDBCRUD_YP.BLL.MongoLogic.Find``1(MongoDB.Driver.FilterDefinition{``0},MongoDB.Driver.FindOptions)">
-            <summary>
-            MongoDB C# Driver的Find方法，返回IFindFluent。采用类型T的完全限定名作为collection name
-            </summary>
-        </member>
-        <member name="M:MongoDBCRUD_YP.BLL.MongoLogic.Get``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Int32,System.Int32,System.String)">
-            <summary>
-            取符合条件的数据 sort中多个排序条件逗号分隔，默认asc
-            </summary>
-        </member>
-        <member name="M:MongoDBCRUD_YP.BLL.MongoLogic.Get``1(System.Collections.Generic.List{System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}},System.Int32,System.Int32,System.String)">
-            <summary>
-            取符合条件的数据 sort中多个排序条件逗号分隔，默认asc
-            </summary>
-        </member>
-        <member name="M:MongoDBCRUD_YP.BLL.MongoLogic.Get``1(System.Collections.Generic.List{System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}})">
-            <summary>
-            查询
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="conditions"></param>
-            <returns></returns>
-        </member>
-        <member name="M:MongoDBCRUD_YP.BLL.MongoLogic.Modify``1(System.String,System.String,System.String,System.String)">
-            <summary>
-            更新
-            </summary>
-            <param name="id"></param>
-            <param name="field"></param>
-            <param name="value"></param>
         </member>
         <member name="T:MongoDBCRUD_YP.Controllers.HomeController">
             <summary>

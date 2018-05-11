@@ -27,7 +27,7 @@ namespace MongoDBCRUD_YP.Controllers
             try
             {
                 // list = new MongoDbService().Get<User>(a => a.Name==name);
-                list = new MongoDbHelper<User>().QueryAll();
+                list = new MongoDbHelper<User>().QueryAll(typeof(User).Name);
             }
             catch (Exception e)
             {
@@ -53,7 +53,7 @@ namespace MongoDBCRUD_YP.Controllers
                 {
                     return new BaseResponse() { IsSuccess = false, Message = "请求参数不能为空" };
                 }
-                new MongoDbHelper<User>().Insert(request);
+                new MongoDbHelper<User>().Insert(request,typeof(User).Name);
               
                 response.IsSuccess = true;
                 response.Message = "SUCCESS";
@@ -82,7 +82,7 @@ namespace MongoDBCRUD_YP.Controllers
                 {
                     return new BaseResponse(){ IsSuccess = false,Message="请求参数不能为空" };
                 }
-                 new MongoDbHelper<User>().Update(request);
+                 new MongoDbHelper<User>().Update(request,typeof(User).Name);
                //var result= new MongoDbHelper<User>().UpdateOne(request,request.Id);
                 response.IsSuccess = true;
                 response.Message = "SUCCESS";
@@ -111,7 +111,7 @@ namespace MongoDBCRUD_YP.Controllers
                 {
                     return new BaseResponse() { IsSuccess = false, Message = "请求参数不能为空" };
                 }
-                new MongoDbHelper<User>().Delete(request);
+                new MongoDbHelper<User>().Delete(request, typeof(User).Name);
                 response.IsSuccess = true;
                 response.Message = "SUCCESS";
             }

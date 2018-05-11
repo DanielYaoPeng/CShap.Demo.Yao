@@ -59,13 +59,16 @@ namespace MongoDBCRUD_YP.BLL
         //}
         #endregion
         private IMongoDatabase db = null;
-
+        private readonly MongoClient client;
         private IMongoCollection<T> collection = null;
+        private static readonly string connStr = ConfigurationManager.AppSettings["MongoDb"].ToString();//GlobalConfig.Settings["mongoConnStr"];
 
         public MongoDbHelper()
         {
-            this.db = MongoDbService.GetDb();
-            collection = db.GetCollection<T>(typeof(T).Name);
+            // this.db = MongoDbService.GetDb();
+            client = new MongoClient(connStr);
+            //this.db=client.GetDatabase(dbName);
+          
         }
 
 
@@ -75,8 +78,10 @@ namespace MongoDBCRUD_YP.BLL
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        public T Insert(T entity)
+        public T Insert(T entity,string dbName)
         {
+            this.db = client.GetDatabase(dbName);
+            collection = db.GetCollection<T>(typeof(T).Name);
             var flag = ObjectId.GenerateNewId();
             //entity.GetType().GetProperty("Id").SetValue(entity, flag);
             entity.State = "y";
@@ -92,8 +97,10 @@ namespace MongoDBCRUD_YP.BLL
         /// <param name="id"></param>
         /// <param name="field"></param>
         /// <param name="value"></param>
-        public void Modify(string id, string field, string value)
+        public void Modify(string id, string field, string value,string dbName)
         {
+            this.db = client.GetDatabase(dbName);
+            collection = db.GetCollection<T>(typeof(T).Name);
             var filter = Builders<T>.Filter.Eq("Id", id);
             var updated = Builders<T>.Update.Set(field, value);
             UpdateResult result = collection.UpdateOneAsync(filter, updated).Result;
@@ -102,10 +109,12 @@ namespace MongoDBCRUD_YP.BLL
         /// 更新
         /// </summary>
         /// <param name="entity"></param>
-        public void Update(T entity)
+        public void Update(T entity,string dbName)
         {
             try
             {
+                this.db = client.GetDatabase(dbName);
+                collection = db.GetCollection<T>(typeof(T).Name);
                 var old = collection.Find(e => e.Id.Equals(entity.Id)).ToList().FirstOrDefault();
 
                 foreach (var prop in entity.GetType().GetProperties())
@@ -138,8 +147,10 @@ namespace MongoDBCRUD_YP.BLL
         /// 删除
         /// </summary>
         /// <param name="entity"></param>
-        public void Delete(T entity)
+        public void Delete(T entity,string dbName)
         {
+            this.db = client.GetDatabase(dbName);
+            collection = db.GetCollection<T>(typeof(T).Name);
             var filter = Builders<T>.Filter.Eq("Id", entity.Id);
             collection.DeleteOneAsync(filter);
         }
@@ -156,8 +167,10 @@ namespace MongoDBCRUD_YP.BLL
         /// 查询所有数据
         /// </summary>
         /// <returns></returns>
-        public List<T> QueryAll()
+        public List<T> QueryAll(string dbName)
         {
+            this.db = client.GetDatabase(dbName);
+            collection = db.GetCollection<T>(typeof(T).Name);
             return collection.Find(a => a.State != "").ToList();
         }
         /// <summary>
@@ -165,23 +178,29 @@ namespace MongoDBCRUD_YP.BLL
         /// </summary>
         /// <param name="express"></param>
         /// <returns></returns>
-        public T QueryByFirst(Expression<Func<T, bool>> express)
+        public T QueryByFirst(Expression<Func<T, bool>> express,string dbName)
         {
+            this.db = client.GetDatabase(dbName);
+            collection = db.GetCollection<T>(typeof(T).Name);
             return collection.Find(express).ToList().FirstOrDefault();
         }
         /// <summary>
         /// 批量添加
         /// </summary>
         /// <param name="list"></param>
-        public void InsertBatch(List<T> list)
+        public void InsertBatch(List<T> list,string dbName)
         {
+            this.db = client.GetDatabase(dbName);
+            collection = db.GetCollection<T>(typeof(T).Name);
             collection.InsertManyAsync(list);
         }
         /// <summary>
         /// 根据Id批量删除
         /// </summary>
-        public void DeleteBatch(List<ObjectId> list)
+        public void DeleteBatch(List<ObjectId> list,string dbName)
         {
+            this.db = client.GetDatabase(dbName);
+            collection = db.GetCollection<T>(typeof(T).Name);
             var filter = Builders<T>.Filter.In("Id", list);
             collection.DeleteManyAsync(filter);
         }
@@ -190,8 +209,10 @@ namespace MongoDBCRUD_YP.BLL
         /// 未添加到索引的数据
         /// </summary>
         /// <returns></returns>
-        public List<T> QueryToLucene()
+        public List<T> QueryToLucene(string dbName)
         {
+            this.db = client.GetDatabase(dbName);
+            collection = db.GetCollection<T>(typeof(T).Name);
             return collection.Find(a => a.State.Equals("y") || a.State.Equals("n")).ToList();
         }
 
