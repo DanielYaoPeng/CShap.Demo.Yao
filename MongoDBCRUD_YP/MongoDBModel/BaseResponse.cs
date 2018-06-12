@@ -31,5 +31,6 @@ namespace MongoDBModel
         public string CreateTime { get; set; }
 
         public string UpdateTime { get; set; }
+        public string DocId { get; set; }
     }
 }

@@ -23,3 +23,4 @@ D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\MongoDBModel\obj\Debug\MongoDBMod
 D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\MongoDBModel\obj\Debug\MongoDBModel.csproj.CopyComplete
 D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\MongoDBModel\obj\Debug\MongoDBModel.dll
 D:\个人project\CShap.Demo.Yao\MongoDBCRUD_YP\MongoDBModel\obj\Debug\MongoDBModel.pdb
+D:\项目\新人学习\CShap.Demo.Yao\MongoDBCRUD_YP\MongoDBModel\obj\Debug\MongoDBModel.csprojAssemblyReference.cache

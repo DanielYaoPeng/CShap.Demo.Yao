@@ -21,9 +21,10 @@ namespace MongoDBTest
                 HttpContent httpContent = new StringContent(jsonPostDate);
                 httpContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
                 client.DefaultRequestHeaders.Add("username", "txt");
-                //var response = client.PostAsync("http://localhost:54869/api/Home/GetData?", httpContent).Result; http://localhost:54869/
+                var response = client.PostAsync("http://localhost:54869/api/Home/InsertData?", httpContent).Result;
+                //http://localhost:54869/
 
-                var response = client.GetAsync("http://localhost:54869/api/Home/GetData?").Result;
+                //var response = client.GetAsync("http://localhost:54869/api/Home/InsertData?").Result;
                 var result = response.Content.ReadAsStringAsync().Result;
             }
         }
